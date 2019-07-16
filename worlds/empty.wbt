@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.3102931477427285 0.6656044391902799 0.6787406669664802 3.7234039890922586
-  position -0.40013476142660004 2.1666290921319984 -0.43830737978803164
+  orientation -0.5313511348724949 0.6719804304014619 0.5158568334598058 1.9188429564881473
+  position 7.59254513972013 19.705533439760405 -0.8986094125259589
 }
 TexturedBackground {
 }
@@ -12,14 +12,14 @@ TexturedBackgroundLight {
 Floor {
 }
 DEF THREE_WHEELS Robot {
-  translation -0.4224930122289915 0.05634040538768043 -0.45408691061188544
-  rotation -0.0363027236599759 -0.9993402244847652 0.0011081433148605907 0.27478439627796614
+  translation -0.7312060900804771 -0.039119892305800416 -2.3584759195357683
+  rotation -0.02001624654548727 -0.9997996525901984 6.748887716553707e-05 2.2496412065500726
   children [
     DEF SOLID1 Solid {
       children [
         DEF WHEEL1 HingeJoint {
           jointParameters HingeJointParameters {
-            position -468.00253466264854
+            position -411.1871294923335
             axis 0 0 1
             anchor 0 0 0.1
           }
@@ -36,16 +36,16 @@ DEF THREE_WHEELS Robot {
           ]
           endPoint Solid {
             translation 0 0 0.15000000000000002
-            rotation 0 0 -0.9999999999999999 3.0468219313591436
+            rotation 0 0 1 3.50310078151921
             children [
               DEF sr1 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -214.6032872441155
+                  position -562.2936671619584
                   anchor 0 0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 0.05 0.02
-                  rotation -1 0 0 0.9749868000095662
+                  rotation 1 0 0 3.1930104842043727
                   children [
                     DEF r1 Transform {
                       rotation 0 0 1 1.5708
@@ -70,19 +70,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity 0.0011009056271094244 0.0005466659601538418 -0.11751428948227546
-                  angularVelocity -12.332419136509849 -0.0411694488635046 -0.11644573110062766
                 }
               }
               DEF sr2 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -222.5034279078005
+                  position -592.3899411974307
                   axis 0.707107 0.707107 0
                   anchor -0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 0.03535 0.02
-                  rotation 0.7071067811865476 0.7071067811865476 0 3.6912431506646133
+                  rotation -0.7071067811865475 -0.7071067811865475 0 1.7705223225496152
                   children [
                     DEF r2 Transform {
                       rotation 0 0 1 2.27
@@ -97,18 +95,16 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.04521964496832274 0.10721709371775816 -0.13203115128597942
-                  angularVelocity -5.83774252791158 -5.201609311671586 1.713226404814248
                 }
               }
               DEF sr3 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 281.06319942718096
+                  position 650.6688576777284
                   anchor 0 -0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 -0.05 0.02
-                  rotation 1 0 0 4.603045911279157
+                  rotation -1 0 0 2.7824142689485964
                   children [
                     DEF r3 Transform {
                       rotation 0 0 1 1.5708
@@ -123,19 +119,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.29284279302952326 -0.00987554468379142 -0.20486848505272606
-                  angularVelocity 9.500620522017773 0.07018098074482593 6.0470523916353525
                 }
               }
               DEF sr4 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 186.48161396440548
+                  position 525.8017684359545
                   axis 0.707107 0.707107 0
                   anchor 0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 -0.03535 0.02
-                  rotation -0.7071067811865475 -0.7071067811865475 0 2.013945250982111
+                  rotation -0.7071067811865475 -0.7071067811865475 0 1.985797367130764
                   children [
                     DEF r4 Transform {
                       rotation 0 0 1 2.27
@@ -150,19 +144,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.246479223884177 -0.11675774487537206 -0.19034391631406983
-                  angularVelocity 6.6001452707980235 7.878697555519738 5.163779658715371
                 }
               }
               DEF sr5 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -217.55464677907847
+                  position -607.7940534959521
                   axis 0 1 0
                   anchor -0.05 0 0.02
                 }
                 endPoint Solid {
                   translation -0.05 0 0.02
-                  rotation 0 -1 0 3.926346334972527
+                  rotation 0 -1 0 4.608264006711782
                   children [
                     DEF r5 Transform {
                       children [
@@ -176,19 +168,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.15051990302407145 0.14859521527770997 -0.16362495618029738
-                  angularVelocity -0.9118718850315408 -11.708386245546608 3.225923758392971
                 }
               }
               DEF sr6 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 147.3725886047981
+                  position 494.3435918892958
                   axis 0 1 0
                   anchor 0.05 0 0.02
                 }
                 endPoint Solid {
                   translation 0.05 0 0.02
-                  rotation 0 -0.9999999999999999 0 3.423858767511979
+                  rotation 0 0.9999999999999999 0 4.255137929288049
                   children [
                     DEF r6 Transform {
                       children [
@@ -202,19 +192,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.14119378620880688 -0.1580236205530541 -0.15874456429616005
-                  angularVelocity -0.9559186698179021 9.742968320216434 3.001874569905869
                 }
               }
               DEF sr7 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -275.97675086819106
+                  position -629.1681433403132
                   axis -0.707107 0.707107 0
                   anchor -0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 -0.03535 0.02
-                  rotation -0.7071067811865475 0.7071067811865475 0 0.4834026477107435
+                  rotation 0.7071067811865476 -0.7071067811865476 0 0.8496126223545882
                   children [
                     DEF r7 Transform {
                       rotation 0 0 1 0.76
@@ -229,19 +217,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.25307216623642104 0.10003559150400956 -0.19379432064476473
-                  angularVelocity 5.055090878128915 -6.080731599197186 4.817502238611188
                 }
               }
               DEF sr8 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 167.4880619049285
+                  position 486.54676913557813
                   axis -0.707107 0.707107 0
                   anchor 0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 0.03535 0.02
-                  rotation -0.7071067811865476 0.7071067811865476 0 4.125243918259238
+                  rotation 0.7071067811865476 -0.7071067811865476 0 3.541684824429614
                   children [
                     DEF r8 Transform {
                       rotation 0 0 1 0.76
@@ -256,8 +242,6 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.03864079052665598 -0.10944318467239164 -0.12857519919765456
-                  angularVelocity -7.834016628553677 7.139427163696898 1.0921765969807473
                 }
               }
               DEF WHEEL_TRANS Transform {
@@ -300,8 +284,6 @@ DEF THREE_WHEELS Robot {
             }
             physics Physics {
             }
-            linearVelocity -0.14585673566228202 -0.0047032725022740154 -0.16118444114246894
-            angularVelocity -0.8578888102943518 0.02202691322862594 2.8862504551938746
           }
         }
       ]
@@ -317,7 +299,7 @@ DEF THREE_WHEELS Robot {
       children [
         DEF WHEEL2 HingeJoint {
           jointParameters HingeJointParameters {
-            position 182.68210153859647
+            position 310.52259702410686
             axis 0 0 1
             anchor 0 0 0.1
           }
@@ -334,16 +316,16 @@ DEF THREE_WHEELS Robot {
           ]
           endPoint Solid {
             translation 0 0 0.14999999999999997
-            rotation 0 0 -1 5.81105186679135
+            rotation 0 0 -1 3.6342625248728755
             children [
               DEF sr1 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -458.96299971728376
+                  position -286.41816162699524
                   anchor 0 0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 0.05 0.02
-                  rotation 1 0 0 5.992713014005635
+                  rotation 1 0 0 2.608362503265735
                   children [
                     USE r1
                   ]
@@ -353,19 +335,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.17261478408885175 0.04633637198554059 -0.29311271850987525
-                  angularVelocity -4.897928817687509 4.288352234563756 -6.06688999597978
                 }
               }
               DEF sr2 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -442.9900240054878
+                  position -261.1521934818415
                   axis 0.707107 0.707107 0
                   anchor -0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 0.03535 0.02
-                  rotation -0.7071067811865475 -0.7071067811865475 0 3.167052502916729
+                  rotation 0.7071067811865476 0.7071067811865476 0 2.7415894197011386
                   children [
                     USE r2
                   ]
@@ -375,18 +355,16 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.1534525581371167 0.11867997151322578 -0.1981357145998465
-                  angularVelocity -3.8431076474937216 10.73896151617501 -1.7242917106788345
                 }
               }
               DEF sr3 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 371.9915838956008
+                  position 256.24556829758905
                   anchor 0 -0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 -0.05 0.02
-                  rotation -1 0 0 4.999534535174392
+                  rotation 1 0 0 4.918156010405586
                   children [
                     USE r3
                   ]
@@ -396,19 +374,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.117511273154911 -0.11494755108735435 -0.027015509244139417
-                  angularVelocity -1.192908993923986 -5.244783811614427 8.810020363756252
                 }
               }
               DEF sr4 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 348.01421615798034
+                  position 248.56704023754943
                   axis 0.707107 0.707107 0
                   anchor 0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 -0.03535 0.02
-                  rotation -0.7071067811865476 -0.7071067811865476 0 3.8441610440765
+                  rotation -0.7071067811865476 -0.7071067811865476 0 2.7603720496340243
                   children [
                     USE r4
                   ]
@@ -418,19 +394,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.13667314813495873 -0.18729880256148562 -0.12199223968059046
-                  angularVelocity -2.7194202348361616 -8.766027779784372 2.6483440893625936
                 }
               }
               DEF sr5 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -430.14401691222764
+                  position -233.61763914847725
                   axis 0 1 0
                   anchor -0.05 0 0.02
                 }
                 endPoint Solid {
                   translation -0.05 0 0.02
-                  rotation 0 -1 0 2.887416024015761
+                  rotation 0 1 0 5.143402524347033
                   children [
                     USE r5
                   ]
@@ -440,19 +414,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.129377039841362 0.1013808376730808 -0.08086388633567745
-                  angularVelocity -1.8847825330291352 8.933785280720944 6.100051765743782
                 }
               }
               DEF sr6 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 442.14268033078554
+                  position 333.78040195260144
                   axis 0 1 0
                   anchor 0.05 0 0.02
                 }
                 endPoint Solid {
                   translation 0.05 0 0.02
-                  rotation 0 1 0 2.3197088282144844
+                  rotation 0 -1 0 5.511604635096233
                   children [
                     USE r6
                   ]
@@ -462,19 +434,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.16074791716653988 -0.17006093921650958 -0.23926283810668386
-                  angularVelocity -4.511292549545988 -8.533796059953321 -4.492345788380214
                 }
               }
               DEF sr7 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -424.7905419063942
+                  position -262.8513864098072
                   axis -0.707107 0.707107 0
                   anchor -0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 -0.03535 0.02
-                  rotation -0.7071067811865476 0.7071067811865476 0 2.4660589818176843
+                  rotation -0.7071067811865475 0.7071067811865475 0 1.042396491735413
                   children [
                     USE r7
                   ]
@@ -484,19 +454,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.1144858351907156 0.004700155729250837 -0.00995789365921972
-                  angularVelocity -0.5055904799266865 2.5881018802840385 11.656359526553759
                 }
               }
               DEF sr8 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 406.52595267581876
+                  position 268.08770986325715
                   axis -0.707107 0.707107 0
                   anchor 0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 0.03535 0.02
-                  rotation -0.7071067811865476 0.7071067811865476 0 4.402093016325223
+                  rotation -0.7071067811865475 0.7071067811865475 0 4.193926961714514
                   children [
                     USE r8
                   ]
@@ -506,8 +474,6 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.17563134575769182 -0.07327013454481894 -0.31012298491287754
-                  angularVelocity -5.597855949208173 -2.274852107217378 -8.823992370131302
                 }
               }
               USE WHEEL_TRANS
@@ -533,8 +499,6 @@ DEF THREE_WHEELS Robot {
             }
             physics Physics {
             }
-            linearVelocity -0.1450630072126695 -0.0343050700293927 -0.16006363472031043
-            angularVelocity -3.0519737241246494 -0.00714179494105215 0.6238491256768964
           }
         }
       ]
@@ -548,7 +512,7 @@ DEF THREE_WHEELS Robot {
       children [
         DEF WHEEL3 HingeJoint {
           jointParameters HingeJointParameters {
-            position 165.4297811195853
+            position 162.18851411535564
             axis 0 0 1
             anchor 0 0 0.1
           }
@@ -564,17 +528,17 @@ DEF THREE_WHEELS Robot {
             }
           ]
           endPoint Solid {
-            translation 0 0 0.15
-            rotation 0 0 1 2.070872572915959
+            translation 0 0 0.15000000000000002
+            rotation 0 0 -1 1.1703944313139234
             children [
               DEF sr1 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -155.38228070330214
+                  position -164.01912730007436
                   anchor 0 0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 0.05 0.02
-                  rotation -1 0 0 4.585833330992068
+                  rotation -1 0 0 0.6563093134051108
                   children [
                     USE r1
                   ]
@@ -584,19 +548,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.14801329851301204 -0.0007670922711157935 -0.1611074729710614
-                  angularVelocity -0.020106588850638374 -0.04280928227015964 -0.12086672733003448
                 }
               }
               DEF sr2 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 339.75012728268723
+                  position 384.120147923835
                   axis 0.707107 0.707107 0
                   anchor -0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 0.03535 0.02
-                  rotation 0.7071067811865475 0.7071067811865475 0 0.45812069498956104
+                  rotation -0.7071067811865475 -0.7071067811865475 0 5.437341121299341
                   children [
                     USE r2
                   ]
@@ -606,18 +568,16 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.15126693655034365 0.0023939357349041374 -0.16110357141934822
-                  angularVelocity -16.277198087953074 -6.51798525610821 15.537253597170995
                 }
               }
               DEF sr3 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 184.45243917423676
+                  position 491.693418246829
                   anchor 0 -0.05 0.02
                 }
                 endPoint Solid {
                   translation 0 -0.05 0.02
-                  rotation -0.9999999999999999 0 0 4.043120041150836
+                  rotation 1 0 0 1.604964286821281
                   children [
                     USE r3
                   ]
@@ -627,19 +587,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.141740126118036 0.008153715261240993 -0.1616774772439373
-                  angularVelocity -0.020106601061640916 -0.042809313384563834 -0.12086671524436166
                 }
               }
               DEF sr4 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 131.14994797526248
+                  position -148.6167028885108
                   axis 0.707107 0.707107 0
                   anchor 0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 -0.03535 0.02
-                  rotation 0.7071067811865476 0.7071067811865476 0 5.486241831670748
+                  rotation 0.7071067811865475 0.7071067811865475 0 2.1797444837992885
                   children [
                     USE r4
                   ]
@@ -649,19 +607,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.13840598232953968 0.005132775701504854 -0.1616947136485757
-                  angularVelocity -0.06442468622081879 -0.02857206877085331 -0.07858089268436144
                 }
               }
               DEF sr5 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 347.97862876580353
+                  position 230.5396565654686
                   axis 0 1 0
                   anchor -0.05 0 0.02
                 }
                 endPoint Solid {
                   translation -0.05 0 0.02
-                  rotation 0 -1 0 3.879748436253308
+                  rotation 0 1 0 4.344985507003477
                   children [
                     USE r5
                   ]
@@ -671,19 +627,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.15096218035732237 0.006059582691696402 -0.16118284131988594
-                  angularVelocity -14.110366956154767 10.732982295049807 13.240085605669586
                 }
               }
               DEF sr6 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 142.85722948071447
+                  position -102.63364330245254
                   axis 0 1 0
                   anchor 0.05 0 0.02
                 }
                 endPoint Solid {
                   translation 0.05 0 0.02
-                  rotation 0 1 0 4.627152722763563
+                  rotation 0 -1 0 2.102678387579157
                   children [
                     USE r6
                   ]
@@ -693,19 +647,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.13886092229521194 0.0012689249940094106 -0.16153496737146317
-                  angularVelocity -0.05513176970571151 0.033136840333984216 -0.08827278006683066
                 }
               }
               DEF sr7 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position -151.86495533378545
+                  position -369.5904608500232
                   axis -0.707107 0.707107 0
                   anchor -0.03535 -0.03535 0.02
                 }
                 endPoint Solid {
                   translation -0.03535 -0.03535 0.02
-                  rotation 0.7071067811865476 -0.7071067811865476 0 1.06850796147537
+                  rotation 0.7071067811865475 -0.7071067811865475 0 5.165713033607176
                   children [
                     USE r7
                   ]
@@ -715,19 +667,17 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.14691230941825711 0.008560858213985438 -0.16149322958733636
-                  angularVelocity -0.010287552820007012 0.018774278725802368 -0.13106224753892354
                 }
               }
               DEF sr8 HingeJoint {
                 jointParameters HingeJointParameters {
-                  position 162.13629261289134
+                  position 169.57725605041003
                   axis -0.707107 0.707107 0
                   anchor 0.03535 0.03535 0.02
                 }
                 endPoint Solid {
                   translation 0.03535 0.03535 0.02
-                  rotation 0.7071067811865476 -0.7071067811865476 0 1.2265253737779096
+                  rotation -0.7071067811865476 0.7071067811865476 0 6.214438063740781
                   children [
                     USE r8
                   ]
@@ -737,8 +687,6 @@ DEF THREE_WHEELS Robot {
                     density -1
                     mass 0.1
                   }
-                  linearVelocity -0.1428411152127919 -0.0011742352238692261 -0.16129172062766323
-                  angularVelocity -0.01029374703251594 0.01880307171901753 -0.13105662307757493
                 }
               }
               USE WHEEL_TRANS
@@ -764,8 +712,6 @@ DEF THREE_WHEELS Robot {
             }
             physics Physics {
             }
-            linearVelocity -0.14487663263743125 0.0036937185360955537 -0.16139214410209704
-            angularVelocity -0.005197898427239694 -0.0048014303623470644 -0.13563042924547022
           }
         }
       ]
@@ -828,6 +774,61 @@ DEF THREE_WHEELS Robot {
   physics Physics {
   }
   controller "u3_project_Duarte_Jesus"
-  linearVelocity -0.1396971643315773 -0.01168024323087383 -0.16111946592336324
-  angularVelocity -0.005205068166020843 -0.004808093319312845 -0.13563283895709055
+}
+DEF wall Solid {
+  translation 0 0.6 0
+  children [
+    DEF wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 2.7 1.2000000000000002 0.30000000000000004
+      }
+    }
+  ]
+  boundingObject USE wall
+}
+DEF wall Solid {
+  translation -1.7299999920884206 0.6 -1.2599999974107556
+  rotation 0 0.9999999999999999 0 4.712388966
+  children [
+    DEF wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 3.8000000000000003 1.2000000000000002 0.30000000000000004
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject USE wall
+}
+DEF wall Solid {
+  translation 1.5900000079115795 0.6 -1.2599999496535845
+  rotation 0 0.9999999999999999 0 4.712388966
+  children [
+    DEF wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 1.3 1.2000000000000002 0.30000000000000004
+      }
+    }
+  ]
+  name "solid(3)"
+  boundingObject USE wall
+}
+DEF wall Solid {
+  translation 0.06999999999999983 0.6 -3.13
+  children [
+    DEF wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 2.9 1.2000000000000002 0.30000000000000004
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE wall
 }
