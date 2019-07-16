@@ -8,4 +8,5 @@ centralWidgetVisible: 1
 selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
-textFiles: 0 "../u3_exam/controllers/three_wheels/three_wheels.c"
+textFiles: 0 "controllers/u3_project_Duarte_Jesus/u3_project_Duarte_Jesus.c"
+globalOptionalRendering: JointAxes::CoordinateSystem::LightSensorRays

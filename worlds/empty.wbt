@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.21640368080933267 0.7432342376313659 0.6330658061723874 3.629582403726282
-  position -0.56945305641957 1.7979670858276318 -0.6326334613714555
+  orientation 0.3102931477427285 0.6656044391902799 0.6787406669664802 3.7234039890922586
+  position -0.40013476142660004 2.1666290921319984 -0.43830737978803164
 }
 TexturedBackground {
 }
@@ -805,18 +805,18 @@ DEF THREE_WHEELS Robot {
         }
       ]
     }
-    DEF right LightSensor {
+    DEF left DistanceSensor {
       translation 0.15 0.04 0
-      name "right_light"
+      name "left_light"
       lookupTable [
         0 0 0
         0.2 65535 0
       ]
     }
-    DEF left LightSensor {
+    DEF right DistanceSensor {
       translation 0.1 0.04 0.1
       rotation 0 1 0 -0.9162996938995747
-      name "left_light"
+      name "right_light"
       lookupTable [
         0 0 0
         0.2 65535 0
@@ -827,7 +827,7 @@ DEF THREE_WHEELS Robot {
   boundingObject USE BODY_TRANS
   physics Physics {
   }
-  controller "three_wheels"
+  controller "u3_project_Duarte_Jesus"
   linearVelocity -0.1396971643315773 -0.01168024323087383 -0.16111946592336324
   angularVelocity -0.005205068166020843 -0.004808093319312845 -0.13563283895709055
 }
