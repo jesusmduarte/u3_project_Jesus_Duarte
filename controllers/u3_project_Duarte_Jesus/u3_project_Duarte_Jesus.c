@@ -12,8 +12,8 @@
 #include <webots/position_sensor.h>
 #include <webots/robot.h>
 
+/* C LIBRARIES */
 #include <stdio.h>
-#include <stdlib.h>
 
 #define TIME_STEP 64
 
@@ -23,7 +23,7 @@
 
 #define MAX_VELOCITY 30.36
 #define VELOCITY_AUTONOMOUS 10
-#define VELOCITY_MANUAL 7.5
+#define VELOCITY_MANUAL -3.14
 #define DISTANCE_OBSTACLE 17
 
 /*functions*/
@@ -53,15 +53,15 @@ void manual(int key, WbDeviceTag first_motor, WbDeviceTag second_motor,
             WbDeviceTag third_motor){
     switch (key) {
          /* MOVE FORWARD */
-        case WB_KEYBOARD_UP:    wb_motor_set_velocity(first_motor,-VELOCITY_MANUAL);
-                                wb_motor_set_velocity(second_motor,VELOCITY_MANUAL);
+        case WB_KEYBOARD_UP:    wb_motor_set_velocity(first_motor,VELOCITY_MANUAL);
+                                wb_motor_set_velocity(second_motor,-VELOCITY_MANUAL);
                                 wb_motor_set_velocity(third_motor,0);
                                 printf("Linear Velocity is: %.4lf\n",
                                 linearVelocity(0.3));
                                 break;
         /* MOVE BACKWARD */
-        case WB_KEYBOARD_DOWN:  wb_motor_set_velocity(first_motor,VELOCITY_MANUAL);
-                                wb_motor_set_velocity(second_motor,-VELOCITY_MANUAL);
+        case WB_KEYBOARD_DOWN:  wb_motor_set_velocity(first_motor,-VELOCITY_MANUAL);
+                                wb_motor_set_velocity(second_motor,VELOCITY_MANUAL);
                                 wb_motor_set_velocity(third_motor,0);
                                 printf("Linear Velocity is: %.4lf\n",
                                 linearVelocity(0.3));
@@ -69,25 +69,24 @@ void manual(int key, WbDeviceTag first_motor, WbDeviceTag second_motor,
         /* MOVE TO THE LEFT */
         case WB_KEYBOARD_LEFT:  wb_motor_set_velocity(first_motor,-VELOCITY_MANUAL);
                                 wb_motor_set_velocity(second_motor,-VELOCITY_MANUAL);
-                                wb_motor_set_velocity(third_motor,VELOCITY_MANUAL*1.85);
-                                printf("Linear Velocity is: %.4lf\n",
+                                wb_motor_set_velocity(third_motor,-VELOCITY_MANUAL *2 );                                printf("Linear Velocity is: %.4lf\n",
                                 linearVelocity(0.3));
                                 break;
         /* MOVE TO THE RIGHT */
-        case WB_KEYBOARD_RIGHT: wb_motor_set_velocity(first_motor,VELOCITY_MANUAL);
-                                wb_motor_set_velocity(second_motor,VELOCITY_MANUAL);
-                                wb_motor_set_velocity(third_motor,-VELOCITY_MANUAL * 1.85);
+        case WB_KEYBOARD_RIGHT: wb_motor_set_velocity(first_motor,-VELOCITY_MANUAL);
+                                wb_motor_set_velocity(second_motor,-VELOCITY_MANUAL);
+                                wb_motor_set_velocity(third_motor,VELOCITY_MANUAL);
                                 printf("Linear Velocity is: %.4lf\n",
                                 linearVelocity(0.3));
                                 break;
         /* TURN TO THE LEFT */
         case 'A':               wb_motor_set_velocity(first_motor,VELOCITY_MANUAL);
-                                wb_motor_set_velocity(second_motor,-VELOCITY_MANUAL);
-                                wb_motor_set_velocity(third_motor,-VELOCITY_MANUAL);
+                                wb_motor_set_velocity(second_motor,VELOCITY_MANUAL);
+                                wb_motor_set_velocity(third_motor,VELOCITY_MANUAL);
                                 printf("Degrees/s are: %d\n", 45);
                                 break;
         /* TURN TO THE RIGHT */
-        case 'S':               wb_motor_set_velocity(first_motor,VELOCITY_MANUAL);
+        case 'S':               wb_motor_set_velocity(first_motor,-VELOCITY_MANUAL);
                                 wb_motor_set_velocity(second_motor,-VELOCITY_MANUAL);
                                 wb_motor_set_velocity(third_motor,-VELOCITY_MANUAL);
                                 printf("Degrees/s are: %d\n", 45);
@@ -111,8 +110,8 @@ void autonomous(WbDeviceTag first_motor, WbDeviceTag second_motor,
     /* MOVE FORWARD */
     if ((distance_sensor_value1 > desired_centimeters) && (distance_sensor_value2 > desired_centimeters)) {
 
-       wb_motor_set_velocity(first_motor, -saVELOCITY_AUTONOMOUS);
-       wb_motor_set_velocity(second_motor, VELOCITY_AUTONOMOUS);
+       wb_motor_set_velocity(first_motor, VELOCITY_AUTONOMOUS);
+       wb_motor_set_velocity(second_motor, -VELOCITY_AUTONOMOUS);
        wb_motor_set_velocity(third_motor, 0);
     }
 
@@ -136,7 +135,7 @@ void autonomous(WbDeviceTag first_motor, WbDeviceTag second_motor,
 
     /* AVOID OBSTACLES LEFT */
     if (distance_sensor_value2 <= desired_centimeters && flag_left == 1) {
-       wb_motor_set_velocity(first_motor, -VELOCITY_AUTONOMOUS);
+       wb_motor_set_velocity(first_motor, VELOCITY_AUTONOMOUS);
        wb_motor_set_velocity(second_motor, VELOCITY_AUTONOMOUS);
        wb_motor_set_velocity(third_motor, VELOCITY_AUTONOMOUS);
 
@@ -144,7 +143,7 @@ void autonomous(WbDeviceTag first_motor, WbDeviceTag second_motor,
     }
     /* AVOID OBSTACLES RIGHT */
     if (distance_sensor_value1 <= desired_centimeters && flag_right == 1) {
-        wb_motor_set_velocity(first_motor, VELOCITY_AUTONOMOUS);
+        wb_motor_set_velocity(first_motor, -VELOCITY_AUTONOMOUS);
         wb_motor_set_velocity(second_motor, -VELOCITY_AUTONOMOUS);
         wb_motor_set_velocity(third_motor, -VELOCITY_AUTONOMOUS);
 
@@ -158,7 +157,11 @@ enum {
     MANUAL
 };
 
-
+/*
+ * This is the main program.
+ * The arguments of the main function can be specified by the
+ * "controllerArgs" field of the Robot node
+ */
 int main(int argc, char **argv)
 {
   /* necessary to initialize webots stuff */
@@ -174,11 +177,11 @@ int main(int argc, char **argv)
    WbDeviceTag ps1 = wb_robot_get_device("first_ps");
    WbDeviceTag ps2 = wb_robot_get_device("second_ps");
    WbDeviceTag ps3 = wb_robot_get_device("third_ps");
-   
+
    wb_motor_set_position(first_motor, INFINITY);
    wb_motor_set_position(second_motor, INFINITY);
    wb_motor_set_position(third_motor, INFINITY);
-   
+
    wb_distance_sensor_enable(right_distance, TIME_STEP);
    wb_distance_sensor_enable(left_distance, TIME_STEP);
 
@@ -227,7 +230,7 @@ int main(int argc, char **argv)
                            desired_centimeters);
                            break;
       }
-      current_time = wb_robot_get_time();
+      // current_time = wb_robot_get_time();
       printf("Current time: %.4f\n", current_time);
       printf("Desired centimeters %.4f\n", desired_centimeters);
 
